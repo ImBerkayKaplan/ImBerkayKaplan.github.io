@@ -44,9 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const choiceRef = ref(database, `choices/${userId}`);
             Promise.all([remove(userRef), remove(choiceRef)])
               .then(() => {
-                console.log(
-                  `User ${voterName} and their choices were removed after 1 minute.`
-                );
                 if (localStorage.getItem("userId") === userId.toString()) {
                   localStorage.removeItem("userId"); // Clear localStorage if it's the same user
                 }
