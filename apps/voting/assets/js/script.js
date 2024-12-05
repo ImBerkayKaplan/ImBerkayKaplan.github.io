@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let userId = null;
 
-  // Function to join and register user online
   joinButton.addEventListener("click", () => {
     const voterName = voterNameInput.value.trim();
     if (!voterName) {
@@ -37,6 +36,26 @@ document.addEventListener("DOMContentLoaded", () => {
         buttonsContainer.classList.remove("hidden");
         revealButton.classList.remove("hidden");
         resetButton.classList.remove("hidden");
+
+        // Set a timeout to remove the user and their choices after 1 minute
+        setTimeout(() => {
+          if (userId) {
+            const userRef = ref(database, `users/${userId}`);
+            const choiceRef = ref(database, `choices/${userId}`);
+            Promise.all([remove(userRef), remove(choiceRef)])
+              .then(() => {
+                console.log(
+                  `User ${voterName} and their choices were removed after 1 minute.`
+                );
+                if (localStorage.getItem("userId") === userId.toString()) {
+                  localStorage.removeItem("userId"); // Clear localStorage if it's the same user
+                }
+              })
+              .catch((error) =>
+                console.error("Error removing user after 1 minute:", error)
+              );
+          }
+        }, 300000); // 300000ms = 30 minutes
       })
       .catch((error) => console.error("Error joining:", error));
   });
