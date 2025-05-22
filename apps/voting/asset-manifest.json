@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/apps/voting/static/css/main.dee10d7c.css",
-    "main.js": "/apps/voting/static/js/main.1e502808.js",
-    "static/js/787.5cdbf96d.chunk.js": "/apps/voting/static/js/787.5cdbf96d.chunk.js",
+    "main.css": "/apps/voting/static/css/main.6d3490e7.css",
+    "main.js": "/apps/voting/static/js/main.cf58a41d.js",
+    "static/js/453.0fc213e0.chunk.js": "/apps/voting/static/js/453.0fc213e0.chunk.js",
     "index.html": "/apps/voting/index.html",
     "static/media/getFetch.cjs": "/apps/voting/static/media/getFetch.40f37ddea2378391108f.cjs",
-    "main.dee10d7c.css.map": "/apps/voting/static/css/main.dee10d7c.css.map",
-    "main.1e502808.js.map": "/apps/voting/static/js/main.1e502808.js.map",
-    "787.5cdbf96d.chunk.js.map": "/apps/voting/static/js/787.5cdbf96d.chunk.js.map"
+    "main.6d3490e7.css.map": "/apps/voting/static/css/main.6d3490e7.css.map",
+    "main.cf58a41d.js.map": "/apps/voting/static/js/main.cf58a41d.js.map",
+    "453.0fc213e0.chunk.js.map": "/apps/voting/static/js/453.0fc213e0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.dee10d7c.css",
-    "static/js/main.1e502808.js"
+    "static/css/main.6d3490e7.css",
+    "static/js/main.cf58a41d.js"
   ]
 }
